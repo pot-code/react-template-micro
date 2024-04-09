@@ -1,10 +1,7 @@
 {
   "compilerOptions": {
     "jsx": "react-jsx",
-    "types": [
-      "vite/client",
-      "vitest"
-    ]
+    "types": ["vite/client", "vitest"]
   },
   "files": [],
   "include": [],
