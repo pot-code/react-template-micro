@@ -1,0 +1,76 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "**/*"
+  ],
+  "plugins": [
+    "@nx"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.tsx",
+        "*.js",
+        "*.jsx"
+      ],
+      "rules": {
+        "@nx/enforce-module-boundaries": [
+          "error",
+          {
+            "enforceBuildableLibDependency": true,
+            "allow": [],
+            "depConstraints": [
+              {
+                "sourceTag": "*",
+                "onlyDependOnLibsWithTags": [
+                  "*"
+                ]
+              }
+            ]
+          }
+        ],
+        "max-classes-per-file": "off",
+        "no-bitwise": "off",
+        "no-console": "warn",
+        "no-empty-pattern": "warn",
+        "no-param-reassign": "off",
+        "no-plusplus": "off",
+        "no-underscore-dangle": "warn",
+        "no-unused-vars": "off",
+        "import/extensions": "off",
+        "import/no-extraneous-dependencies": "off",
+        "import/prefer-default-export": "off",
+        "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/naming-convention": "off",
+        "react/button-has-type": "off",
+        "react/function-component-definition": "off",
+        "react/jsx-no-bind": "warn",
+        "react/jsx-props-no-spreading": "off",
+        "react/no-array-index-key": "warn",
+        "react/react-in-jsx-scope": "off",
+        "react/require-default-props": "off"
+      }
+    },
+    {
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
+      "extends": [
+        "plugin:@nx/typescript"
+      ],
+      "rules": {}
+    },
+    {
+      "files": [
+        "*.js",
+        "*.jsx"
+      ],
+      "extends": [
+        "plugin:@nx/javascript"
+      ],
+      "rules": {}
+    }
+  ]
+}
